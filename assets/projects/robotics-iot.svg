@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 200" width="460" height="200">
+  <defs>
+    <linearGradient id="pcard-bg-rb" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#161B22" />
+      <stop offset="60%" stop-color="#0D1117" />
+      <stop offset="100%" stop-color="#090D13" />
+    </linearGradient>
+    <linearGradient id="pcard-border-rb" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D29922" />
+      <stop offset="100%" stop-color="#39D353" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; }
+    .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+  </style>
+
+  <!-- Card Background -->
+  <rect width="460" height="200" rx="10" fill="url(#pcard-bg-rb)" stroke="#30363D" stroke-width="1.2" />
+
+  <!-- Top Accent Highlight -->
+  <path d="M 0 10 C 0 4.5 4.5 0 10 0 L 450 0 C 455.5 0 460 4.5 460 10 L 460 3 C 460 1.5 458.5 0 457 0 L 3 0 C 1.5 0 0 1.5 0 3 Z" fill="url(#pcard-border-rb)" />
+
+  <!-- Category & Status Bar -->
+  <g transform="translate(24, 20)">
+    <rect width="138" height="20" rx="4" fill="#2E2012" stroke="#9E6A03" stroke-width="0.8" />
+    <circle cx="10" cy="10" r="3" fill="#D29922" />
+    <text x="20" y="14" class="mono" font-size="9.5" font-weight="700" fill="#D29922" letter-spacing="0.5">ROBOTICS &amp; HARDWARE</text>
+
+    <!-- Star / Fork Stat simulation -->
+    <g transform="translate(340, 2)">
+      <circle cx="8" cy="8" r="3" fill="#39D353" />
+      <text x="18" y="12" class="mono" font-size="10" font-weight="600" fill="#8B949E">REAL-TIME</text>
+    </g>
+  </g>
+
+  <!-- Project Title -->
+  <text x="24" y="68" class="sans" font-size="19" font-weight="700" fill="#E6EDF3">
+    Autonomous Robotics &amp; Micro-ROS
+  </text>
+
+  <!-- Project Description -->
+  <text x="24" y="93" class="sans" font-size="12" fill="#8B949E">
+    Hardware-in-the-loop kinematics and distributed telemetry streaming
+  </text>
+  <text x="24" y="111" class="sans" font-size="12" fill="#8B949E">
+    over RTOS microcontrollers with sub-millisecond sensor acquisition.
+  </text>
+
+  <!-- Visual Schematic Graphic (Right side) -->
+  <g transform="translate(385, 90)">
+    <rect x="-18" y="-18" width="36" height="36" rx="4" fill="#161B22" stroke="#D29922" stroke-width="1.5" />
+    <circle cx="0" cy="0" r="6" fill="#39D353" />
+    <line x1="-18" y1="-9" x2="-25" y2="-9" stroke="#D29922" stroke-width="1.5" />
+    <line x1="-18" y1="9" x2="-25" y2="9" stroke="#D29922" stroke-width="1.5" />
+    <line x1="18" y1="-9" x2="25" y2="-9" stroke="#D29922" stroke-width="1.5" />
+    <line x1="18" y1="9" x2="25" y2="9" stroke="#D29922" stroke-width="1.5" />
+    <path d="M 0 -24 L 6 -18 L -6 -18 Z" fill="#39D353" />
+  </g>
+
+  <!-- Tech Stack Chips -->
+  <g transform="translate(24, 150)">
+    <rect x="0" y="0" width="50" height="22" rx="4" fill="#21262D" stroke="#30363D" stroke-width="0.8" />
+    <text x="25" y="15" text-anchor="middle" class="mono" font-size="10" font-weight="600" fill="#D29922">C++</text>
+
+    <rect x="58" y="0" width="58" height="22" rx="4" fill="#21262D" stroke="#30363D" stroke-width="0.8" />
+    <text x="87" y="15" text-anchor="middle" class="mono" font-size="10" font-weight="600" fill="#39D353">ROS2</text>
+
+    <rect x="124" y="0" width="70" height="22" rx="4" fill="#21262D" stroke="#30363D" stroke-width="0.8" />
+    <text x="159" y="15" text-anchor="middle" class="mono" font-size="10" font-weight="600" fill="#58A6FF">FreeRTOS</text>
+
+    <rect x="202" y="0" width="56" height="22" rx="4" fill="#21262D" stroke="#30363D" stroke-width="0.8" />
+    <text x="230" y="15" text-anchor="middle" class="mono" font-size="10" font-weight="600" fill="#E6EDF3">ESP32</text>
+  </g>
+</svg>

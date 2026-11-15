@@ -1,0 +1,182 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="100%" height="100%">
+  <defs>
+    <!-- Dark Background Gradients -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090D13" />
+      <stop offset="50%" stop-color="#0D1117" />
+      <stop offset="100%" stop-color="#161B22" />
+    </linearGradient>
+
+    <linearGradient id="cyber-blue-emerald" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#58A6FF" />
+      <stop offset="50%" stop-color="#388BFD" />
+      <stop offset="100%" stop-color="#39D353" />
+    </linearGradient>
+
+    <linearGradient id="emerald-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#39D353" />
+      <stop offset="100%" stop-color="#238636" />
+    </linearGradient>
+
+    <linearGradient id="card-panel-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#161B22" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#0D1117" stop-opacity="0.95" />
+    </linearGradient>
+
+    <filter id="glow-blue" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="glow-green" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Circuit Pattern -->
+    <pattern id="dashboard-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#30363D" stroke-width="0.5" stroke-opacity="0.3" />
+      <circle cx="40" cy="40" r="1" fill="#58A6FF" fill-opacity="0.25" />
+    </pattern>
+  </defs>
+
+  <style>
+    .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
+    .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+    
+    @keyframes pulse-green {
+      0%, 100% { opacity: 0.8; r: 4.5px; }
+      50% { opacity: 0.3; r: 6.5px; }
+    }
+    .pulsing-indicator {
+      animation: pulse-green 2s ease-in-out infinite;
+    }
+  </style>
+
+  <!-- Base Canvas -->
+  <rect width="1200" height="320" rx="12" fill="url(#bg-grad)" stroke="#30363D" stroke-width="1.2" />
+  <rect width="1200" height="320" rx="12" fill="url(#dashboard-grid)" />
+
+  <!-- Ambient Glow Blobs -->
+  <circle cx="950" cy="60" r="180" fill="#58A6FF" fill-opacity="0.06" filter="url(#glow-blue)" />
+  <circle cx="150" cy="240" r="140" fill="#39D353" fill-opacity="0.05" filter="url(#glow-green)" />
+
+  <!-- Top Telemetry Header Bar -->
+  <g transform="translate(30, 24)">
+    <rect width="1140" height="32" rx="6" fill="#161B22" stroke="#30363D" stroke-width="0.8" />
+    
+    <!-- System Status Pulse -->
+    <circle cx="18" cy="16" r="4.5" fill="#39D353" class="pulsing-indicator" />
+    <circle cx="18" cy="16" r="3" fill="#2EA043" />
+    <text x="32" y="20" class="mono" font-size="11" font-weight="600" fill="#39D353" letter-spacing="1">SYSTEM TELEMETRY: ACTIVE</text>
+
+    <!-- Node Info -->
+    <text x="240" y="20" class="mono" font-size="11" fill="#8B949E">|</text>
+    <text x="256" y="20" class="mono" font-size="11" fill="#8B949E">NODE: <tspan fill="#58A6FF">IND-DLH-CORE</tspan></text>
+    
+    <text x="410" y="20" class="mono" font-size="11" fill="#8B949E">|</text>
+    <text x="426" y="20" class="mono" font-size="11" fill="#8B949E">LATENCY: <tspan fill="#58A6FF">8ms</tspan></text>
+
+    <text x="540" y="20" class="mono" font-size="11" fill="#8B949E">|</text>
+    <text x="556" y="20" class="mono" font-size="11" fill="#8B949E">UPTIME: <tspan fill="#39D353">99.98%</tspan></text>
+
+    <!-- Security & Mode -->
+    <rect x="980" y="6" width="144" height="20" rx="4" fill="#21262D" stroke="#388BFD" stroke-width="0.8" />
+    <text x="1052" y="19.5" text-anchor="middle" class="mono" font-size="10" font-weight="700" fill="#58A6FF" letter-spacing="0.8">TLS 1.3 // ENCRYPTED</text>
+  </g>
+
+  <!-- Left Main Information Block -->
+  <g transform="translate(50, 95)">
+    <!-- Role Badge -->
+    <rect x="0" y="0" width="220" height="24" rx="4" fill="#1F2A38" stroke="#388BFD" stroke-width="0.8" />
+    <circle cx="12" cy="12" r="3" fill="#58A6FF" />
+    <text x="24" y="16" class="mono" font-size="10.5" font-weight="700" fill="#58A6FF" letter-spacing="1">SOFTWARE ENGINEER</text>
+
+    <!-- Name Heading -->
+    <text x="0" y="68" class="sans" font-size="44" font-weight="800" fill="url(#cyber-blue-emerald)" letter-spacing="-0.5">
+      Nur Mohammad Mandal
+    </text>
+
+    <!-- Dynamic Tagline -->
+    <text x="0" y="104" class="sans" font-size="16" font-weight="400" fill="#E6EDF3">
+      Architecting Intelligent Systems, Autonomous Robotics &amp; Distributed Cloud Solutions
+    </text>
+
+    <!-- Location & Identity metadata -->
+    <g transform="translate(0, 130)">
+      <!-- Location Chip -->
+      <rect x="0" y="0" width="105" height="26" rx="13" fill="#21262D" stroke="#30363D" stroke-width="1" />
+      <text x="14" y="17" class="mono" font-size="11.5" fill="#8B949E">📍 <tspan fill="#E6EDF3" font-weight="500">India</tspan></text>
+
+      <!-- Specialty 1: AI -->
+      <rect x="115" y="0" width="135" height="26" rx="13" fill="#161B22" stroke="#388BFD" stroke-width="1" />
+      <text x="182" y="17" text-anchor="middle" class="mono" font-size="11" font-weight="600" fill="#58A6FF">⚡ AI Development</text>
+
+      <!-- Specialty 2: Full-Stack -->
+      <rect x="260" y="0" width="125" height="26" rx="13" fill="#161B22" stroke="#39D353" stroke-width="1" />
+      <text x="322" y="17" text-anchor="middle" class="mono" font-size="11" font-weight="600" fill="#39D353">💻 Full-Stack</text>
+
+      <!-- Specialty 3: Robotics -->
+      <rect x="395" y="0" width="110" height="26" rx="13" fill="#161B22" stroke="#D29922" stroke-width="1" />
+      <text x="450" y="17" text-anchor="middle" class="mono" font-size="11" font-weight="600" fill="#D29922">🤖 Robotics</text>
+
+      <!-- Specialty 4: Automation -->
+      <rect x="515" y="0" width="125" height="26" rx="13" fill="#161B22" stroke="#BC8CFF" stroke-width="1" />
+      <text x="577" y="17" text-anchor="middle" class="mono" font-size="11" font-weight="600" fill="#BC8CFF">⚙️ Automation</text>
+    </g>
+  </g>
+
+  <!-- Right Dashboard Visual Widget (HUD Telemetry Matrix) -->
+  <g transform="translate(820, 85)">
+    <!-- Background Card -->
+    <rect width="330" height="195" rx="10" fill="url(#card-panel-grad)" stroke="#30363D" stroke-width="1" />
+    
+    <!-- Header of HUD Widget -->
+    <path d="M 0 10 C 0 4.5 4.5 0 10 0 L 320 0 C 325.5 0 330 4.5 330 10 L 330 32 L 0 32 Z" fill="#21262D" />
+    <circle cx="16" cy="16" r="3" fill="#F85149" />
+    <circle cx="28" cy="16" r="3" fill="#D29922" />
+    <circle cx="40" cy="16" r="3" fill="#39D353" />
+    <text x="60" y="20" class="mono" font-size="10.5" font-weight="600" fill="#8B949E">DEVELOPER_ANALYTICS_V4</text>
+
+    <!-- Mini Telemetry Stat 1 -->
+    <g transform="translate(18, 48)">
+      <rect width="138" height="58" rx="6" fill="#0D1117" stroke="#30363D" stroke-width="0.8" />
+      <text x="12" y="20" class="mono" font-size="9.5" fill="#8B949E">CORE ARCHITECTURE</text>
+      <text x="12" y="44" class="sans" font-size="17" font-weight="700" fill="#58A6FF">AI &amp; Neural</text>
+      <circle cx="124" cy="30" r="4" fill="#58A6FF" filter="url(#glow-blue)" />
+    </g>
+
+    <!-- Mini Telemetry Stat 2 -->
+    <g transform="translate(172, 48)">
+      <rect width="138" height="58" rx="6" fill="#0D1117" stroke="#30363D" stroke-width="0.8" />
+      <text x="12" y="20" class="mono" font-size="9.5" fill="#8B949E">SYSTEM STATUS</text>
+      <text x="12" y="44" class="sans" font-size="17" font-weight="700" fill="#39D353">Production</text>
+      <circle cx="124" cy="30" r="4" fill="#39D353" filter="url(#glow-green)" />
+    </g>
+
+    <!-- Mini Telemetry Stat 3 -->
+    <g transform="translate(18, 120)">
+      <rect width="138" height="58" rx="6" fill="#0D1117" stroke="#30363D" stroke-width="0.8" />
+      <text x="12" y="20" class="mono" font-size="9.5" fill="#8B949E">WORKFLOW VELOCITY</text>
+      <text x="12" y="44" class="sans" font-size="17" font-weight="700" fill="#D29922">Optimal</text>
+      <path d="M 115 42 L 122 32 L 129 37 L 134 26" fill="none" stroke="#D29922" stroke-width="1.5" stroke-linecap="round" />
+    </g>
+
+    <!-- Mini Telemetry Stat 4 -->
+    <g transform="translate(172, 120)">
+      <rect width="138" height="58" rx="6" fill="#0D1117" stroke="#30363D" stroke-width="0.8" />
+      <text x="12" y="20" class="mono" font-size="9.5" fill="#8B949E">INTEGRATION</text>
+      <text x="12" y="44" class="sans" font-size="17" font-weight="700" fill="#BC8CFF">CI/CD Sync</text>
+      <circle cx="124" cy="30" r="4" fill="#BC8CFF" />
+    </g>
+  </g>
+
+  <!-- Bottom Accent Line -->
+  <line x1="0" y1="319" x2="1200" y2="319" stroke="url(#cyber-blue-emerald)" stroke-width="2" />
+</svg>

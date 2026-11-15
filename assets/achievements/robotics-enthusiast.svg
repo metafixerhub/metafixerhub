@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 96" width="340" height="96">
+  <defs>
+    <linearGradient id="bg-grad-rb" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#161B22" />
+      <stop offset="100%" stop-color="#0D1117" />
+    </linearGradient>
+    <linearGradient id="border-grad-rb" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D29922" />
+      <stop offset="100%" stop-color="#39D353" />
+    </linearGradient>
+    <filter id="glow-rb" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; }
+    .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+  </style>
+
+  <!-- Card Body -->
+  <rect width="340" height="96" rx="8" fill="url(#bg-grad-rb)" stroke="#30363D" stroke-width="1.2" />
+  <path d="M 0 8 C 0 3.6 3.6 0 8 0 L 120 0 L 105 96 L 8 96 C 3.6 96 0 92.4 0 88 Z" fill="#2E2413" fill-opacity="0.35" />
+  
+  <!-- Left Hex Badge Container -->
+  <g transform="translate(48, 48)">
+    <polygon points="0,-34 29,-17 29,17 0,34 -29,17 -29,-17" fill="#0D1117" stroke="url(#border-grad-rb)" stroke-width="1.8" filter="url(#glow-rb)" />
+    <polygon points="0,-27 23,-13 23,13 0,27 -23,13 -23,-13" fill="#161B22" stroke="#30363D" stroke-width="1" />
+    
+    <!-- Robotics & Gear Icon -->
+    <!-- Center Microchip Base -->
+    <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#D29922" />
+    <circle cx="0" cy="0" r="3.5" fill="#0D1117" />
+    <!-- Robotic Joint Arms -->
+    <path d="M 0 -8 L 0 -15 L 7 -15" fill="none" stroke="#39D353" stroke-width="2" stroke-linecap="round" />
+    <circle cx="7" cy="-15" r="2" fill="#39D353" />
+    <path d="M -8 0 L -15 0 L -15 7" fill="none" stroke="#D29922" stroke-width="2" stroke-linecap="round" />
+    <circle cx="-15" cy="7" r="2" fill="#D29922" />
+    <!-- Gear Teeth Accents -->
+    <rect x="-2" y="-12" width="4" height="2" fill="#E6EDF3" />
+    <rect x="-2" y="10" width="4" height="2" fill="#E6EDF3" />
+    <rect x="-12" y="-2" width="2" height="4" fill="#E6EDF3" />
+    <rect x="10" y="-2" width="2" height="4" fill="#E6EDF3" />
+  </g>
+
+  <!-- Right Information Section -->
+  <g transform="translate(102, 16)">
+    <!-- Category Pill -->
+    <rect x="0" y="0" width="168" height="18" rx="4" fill="#302616" stroke="#9E6A03" stroke-width="0.7" />
+    <text x="6" y="12.5" class="mono" font-size="9" font-weight="700" fill="#D29922" letter-spacing="0.5">MILESTONE // ROBOTICS &amp; IOT</text>
+    
+    <!-- Title -->
+    <text x="0" y="38" class="sans" font-size="16" font-weight="700" fill="#E6EDF3">Robotics Enthusiast</text>
+    
+    <!-- Description / Spec -->
+    <text x="0" y="55" class="mono" font-size="10" fill="#8B949E">Mechatronics, ROS2 &amp; Edge RTOS</text>
+    
+    <!-- Level Bar / Stars -->
+    <g transform="translate(0, 62)">
+      <rect width="130" height="3" rx="1.5" fill="#21262D" />
+      <rect width="95" height="3" rx="1.5" fill="url(#border-grad-rb)" />
+      <text x="140" y="4" class="mono" font-size="8.5" font-weight="600" fill="#D29922">TIER III</text>
+    </g>
+  </g>
+
+  <!-- Corner Status Pip -->
+  <circle cx="324" cy="16" r="3" fill="#D29922" />
+</svg>

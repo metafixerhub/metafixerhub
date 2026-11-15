@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" width="100%" height="100%">
+  <defs>
+    <linearGradient id="footer-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090D13" />
+      <stop offset="50%" stop-color="#0D1117" />
+      <stop offset="100%" stop-color="#161B22" />
+    </linearGradient>
+
+    <linearGradient id="footer-accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#58A6FF" />
+      <stop offset="50%" stop-color="#388BFD" />
+      <stop offset="100%" stop-color="#39D353" />
+    </linearGradient>
+
+    <pattern id="footer-grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#30363D" stroke-width="0.4" stroke-opacity="0.3" />
+    </pattern>
+  </defs>
+
+  <style>
+    .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
+    .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+    
+    @keyframes cursor-blink {
+      0%, 49% { opacity: 1; }
+      50%, 100% { opacity: 0; }
+    }
+    .terminal-cursor {
+      animation: cursor-blink 1s infinite;
+    }
+  </style>
+
+  <!-- Base Background -->
+  <rect width="1200" height="120" rx="10" fill="url(#footer-bg)" stroke="#30363D" stroke-width="1" />
+  <rect width="1200" height="120" rx="10" fill="url(#footer-grid)" />
+
+  <!-- Top Accent Border Line -->
+  <line x1="0" y1="1" x2="1200" y2="1" stroke="url(#footer-accent)" stroke-width="2" />
+
+  <!-- Left: Interactive Terminal Look -->
+  <g transform="translate(40, 32)">
+    <rect width="400" height="56" rx="6" fill="#161B22" stroke="#30363D" stroke-width="0.8" />
+    
+    <!-- Shell Prompt -->
+    <text x="16" y="24" class="mono" font-size="11.5" fill="#39D353">nurmandal@analytics<tspan fill="#8B949E">:</tspan><tspan fill="#58A6FF">~</tspan><tspan fill="#E6EDF3">$</tspan> <tspan fill="#E6EDF3">metrics-engine --status</tspan></text>
+    
+    <!-- Output Status -->
+    <text x="16" y="44" class="mono" font-size="11" fill="#8B949E">➔ [OK] Engine: <tspan fill="#39D353">ONLINE</tspan> • Sync: <tspan fill="#58A6FF">Automated</tspan> • Telemetry: <tspan fill="#D29922">100%</tspan></text>
+    
+    <!-- Blinking Cursor -->
+    <rect x="335" y="14" width="7" height="12" fill="#39D353" class="terminal-cursor" />
+  </g>
+
+  <!-- Center: System Architecture Meta -->
+  <g transform="translate(480, 42)">
+    <text x="0" y="14" class="sans" font-size="13" font-weight="700" fill="#E6EDF3" letter-spacing="0.5">
+      DEVELOPER DASHBOARD INFRASTRUCTURE
+    </text>
+    <text x="0" y="34" class="mono" font-size="10.5" fill="#8B949E">
+      Engineered by <tspan fill="#58A6FF" font-weight="600">Nur Mohammad Mandal</tspan> • Automated via GitHub Actions
+    </text>
+  </g>
+
+  <!-- Right: Location & Timezone Chip -->
+  <g transform="translate(930, 36)">
+    <rect width="230" height="48" rx="6" fill="#161B22" stroke="#30363D" stroke-width="0.8" />
+    <circle cx="20" cy="24" r="4" fill="#39D353" />
+    <text x="34" y="21" class="mono" font-size="10" font-weight="700" fill="#8B949E">TIMEZONE &amp; REGION</text>
+    <text x="34" y="38" class="mono" font-size="12" font-weight="600" fill="#E6EDF3">IST (UTC+5:30) • India</text>
+  </g>
+</svg>
