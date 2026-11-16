@@ -2,7 +2,6 @@
   =============================================================================
   NUR MOHAMMAD MANDAL — PROFESSIONAL DEVELOPER ANALYTICS DASHBOARD
   Engineered for GitHub Profile: metafixerhub
-  Automated via lowlighter/metrics & GitHub Actions
   =============================================================================
 -->
 
@@ -16,7 +15,7 @@
 <br />
 
 <!-- =============================================================================
-     HERO: LIVE DEVELOPER ANALYTICS ENGINE (LOWLIGHTER/METRICS INFOGRAPHIC)
+     DEVELOPER TELEMETRY & CONTRIBUTION DASHBOARD
      ============================================================================= -->
 
 <div align="center">
@@ -31,10 +30,10 @@
      FEATURED ENGINEERING WORKSPACES & ARCHITECTURAL PROJECTS
      ============================================================================= -->
 
-<h2 align="center" style="color:#58A6FF; border-bottom: 1px solid #30363D; padding-bottom: 8px;">
+<h2 align="center" style="color:#58A6FF; margin-bottom: 4px;">
   🚀 Featured Engineering Projects &amp; Workspaces
 </h2>
-<p align="center" style="color:#8B949E; font-size:13px; margin-top:-4px; margin-bottom:16px;">
+<p align="center" style="color:#8B949E; font-size:13px; margin-top:2px; margin-bottom:18px;">
   Selected open-source initiatives and architectural reference implementations
 </p>
 
@@ -71,11 +70,11 @@
      PERSONAL ENGINEERING MILESTONES SHOWCASE
      ============================================================================= -->
 
-<h2 align="center" style="color:#39D353; border-bottom: 1px solid #30363D; padding-bottom: 8px;">
+<h2 align="center" style="color:#39D353; margin-bottom: 4px;">
   🎖️ Personal Engineering Milestone Badges
 </h2>
-<p align="center" style="color:#8B949E; font-size:12px; margin-top:-4px; margin-bottom:18px;">
-  <i>Specialist competency designations and software engineering milestones. Note: These represent individual domain milestones and are curated independently from official GitHub-issued account badges.</i>
+<p align="center" style="color:#8B949E; font-size:12px; margin-top:2px; margin-bottom:20px;">
+  <i>Specialist competency designations and software engineering milestones</i>
 </p>
 
 <table width="100%" border="0" cellpadding="6" cellspacing="0">
@@ -111,13 +110,3 @@
     </td>
   </tr>
 </table>
-
-<br />
-
-<!-- =============================================================================
-     PROFESSIONAL TELEMETRY FOOTER
-     ============================================================================= -->
-
-<div align="center">
-  <img src="assets/footer.svg" alt="Developer Telemetry Footer" width="100%" />
-</div>
